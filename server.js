@@ -11,8 +11,8 @@ process.on('uncaughtException', (err) =>{
   process.exit(1);
 })
 
-dotenv.config({ path: "./config/config.env" });
-const PORT = process.env.PORT;
+dotenv.config({ path: "./config/.env" });
+const PORT = process.env.PORT || 4000;
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
